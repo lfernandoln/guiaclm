@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa do Campus - UENP</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  
+  <!-- Estilos Globais e da Instância CLM -->
+  <link rel="stylesheet" href="css/campus.css">
+
+  <!-- Matomo Analytics -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+
+    (function() {
+      var u="//analytics.labcct.net.br/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+
+      var d=document,
+          g=d.createElement('script'),
+          s=d.getElementsByTagName('script')[0];
+
+      g.async=true;
+      g.src=u+'matomo.js';
+
+      s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+  <header class="cabecalho">
+    <div class="cabecalho-esquerda">
+      <a href="../index.html" class="btn-voltar" title="Página Inicial">←</a>
+      <img src="../img/logo-uenp.png" alt="Logo UENP" class="logo">
+      <div class="titulo-evento">
+        <p>Campus Luiz Meneghel</p>
+      </div>
+    </div>
+    
+    <!-- Botão visível no celular para abrir/fechar a lista de destinos -->
+    <button id="menu-btn" aria-label="Abrir Menu">☰ Destinos</button>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL (SIDEBAR + MAPA) -->
+  <div class="conteudo">
+    
+    <!-- MENU LATERAL (SIDEBAR) -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h2>Destinos</h2>
+        <!-- Botão de fechar visível no celular -->
+        <button id="sidebar-fechar" class="btn-fechar-sidebar" aria-label="Fechar menu">✕</button>
+      </div>
+      
+      <!-- Lista onde o JS insere os prédios do JSON com rolagem vertical -->
+      <div id="lista-cursos"></div>
+    </aside>
+
+    <!-- ÁREA DO MAPA LEAFLET -->
+    <main id="map"></main>
+  </div>
+
+  <!-- MODAL / JANELA DE DETALHES -->
+  <div id="modal-detalhes" class="modal-overlay oculto">
+    <div class="modal-conteudo">
+      
+      <div class="modal-header">
+        <h3 id="modal-titulo"></h3>
+        <button id="modal-fechar" class="btn-fechar" title="Fechar">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p id="modal-descricao"></p>
+        <div id="modal-setores-container"></div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-link-rota" href="#" target="_blank" class="btn-rota">📍 Como Chegar (Google Maps)</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPTS LEAFLET E APLICAÇÃO -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/campus.js"></script>
+
+</body>
+</html>

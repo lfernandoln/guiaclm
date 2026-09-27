@@ -1,0 +1,350 @@
+/* ==========================
+   1. LAYOUT GERAL E RESET
+========================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ==========================
+   2. CABEÇALHO
+========================== */
+.cabecalho {
+    background: #003366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    height: 56px;
+    flex-shrink: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cabecalho-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 36px;
+    height: auto;
+}
+
+.titulo-evento p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background 0.2s ease;
+}
+
+.btn-voltar:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/* ==========================
+   3. CONTEÚDO PRINCIPAL (MAPA + SIDEBAR)
+========================== */
+.conteudo {
+    flex: 1;
+    display: flex;
+    position: relative;
+    min-height: 0;
+}
+
+#sidebar {
+    width: 280px;
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1050;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #003366;
+}
+
+.btn-fechar-sidebar {
+    display: none; /* Oculto no desktop */
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+#lista-cursos {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.separador-menu {
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #003366;
+    padding: 12px 8px 6px;
+    margin-top: 10px;
+    border-bottom: 2px solid #003366;
+}
+
+.curso {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #ffffff;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.curso:hover {
+    background: #eef5fc;
+    border-color: #1976d2;
+    color: #1976d2;
+}
+
+.curso.ativo {
+    background: #1976d2;
+    color: white;
+    border-color: #1976d2;
+    font-weight: bold;
+}
+
+/* ==========================
+   4. MAPA LEAFLET
+========================== */
+#map {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* ==========================
+   5. MODAL DE SETORES
+========================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.oculto {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal-conteudo {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: #003366;
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.modal-body {
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1 1 auto;
+}
+
+.grupo-setor {
+    margin-bottom: 18px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    border-left: 4px solid #1976d2;
+}
+
+.grupo-setor h4 {
+    margin: 0 0 10px 0;
+    color: #003366;
+    font-size: 15px;
+}
+
+.grupo-setor ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.grupo-setor li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.modal-footer {
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-rota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #2e7d32;
+    color: #ffffff;
+    padding: 12px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.btn-rota:hover {
+    background: #1b5e20;
+}
+
+/* ==========================
+   6. RESPONSIVIDADE (CELULAR / TABLET)
+========================== */
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid white;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 56px;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: calc(100vh - 56px);
+        height: calc(100dvh - 56px);
+        transition: left 0.3s ease;
+    }
+
+    #sidebar.aberto {
+        left: 0;
+    }
+
+    .btn-fechar-sidebar {
+        display: block;
+    }
+
+    /* Ajustes específicos para garantir o botão do Google Maps visível em telas mobile */
+    .modal-overlay {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .modal-conteudo {
+        max-height: 70dvh; /* Evita que o rodapé do modal colida com a navegação do sistema Android */
+        border-radius: 12px;
+    }
+
+    .modal-body {
+        padding: 12px 16px;
+    }
+}

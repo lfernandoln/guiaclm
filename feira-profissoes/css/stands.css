@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 300px;
+}
+
+#planta {
+    flex: 1;
+    position: relative;
+}
+
+.stand {
+    position: absolute;
+}
+
+.separador-menu {
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #555;
+    padding: 10px 8px 4px;
+    margin-top: 8px;
+    border-bottom: 1px solid #ddd;
+}

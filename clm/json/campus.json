@@ -1,0 +1,117 @@
+[
+  {
+    "nome": "Prédio Central",
+    "tipo": "infraestrutura",
+    "lat": -23.106485,
+    "lng": -50.360471,
+    "descricao": "Edifício administrativo e acadêmico principal do Campus Luiz Meneghel.",
+    "setores": [
+      {
+        "categoria": "Administração e Gestão",
+        "itens": [
+          "Direção do Campus (Piso Superior)",
+          "Secretaria Acadêmica",
+          "Recursos Humanos",
+          "Tesouraria",
+          "Almoxarifado",
+          "Gráfica"
+        ]
+      },
+      {
+        "categoria": "Tecnologia e Inovação",
+        "itens": [
+          "NTI - Núcleo de Tecnologia da Informação (Piso Superior)",
+          "AITEC - Agência de Inovação Tecnológica",
+          "CCT – Centro de Ciências Tecnológicas"
+        ]
+      },
+      {
+        "categoria": "Laboratórios",
+        "itens": [
+          "LABMICROS - Laboratório de Microbiologia do Solo",
+          "LABSOLOS - Laboratório de Análise de Solo e Tecido Vegetal"
+        ]
+      },
+      {
+        "categoria": "Centro de Pós-Graduação e Pesquisa",
+        "itens": [
+          "PGPAS - Mestrado em Produção Agropecuária Sustentável",
+          "PROFCOMP - Mestrado Profissional em Ensino de Computação",
+          "PPGEnf-APS - Mestrado Profissional em Enfermagem em Atenção Primária à Saúde"
+        ]
+      }
+    ]
+  },
+  {
+    "nome": "Hospital Veterinário",
+    "tipo": "infraestrutura",
+    "lat": -23.106764,
+    "lng": -50.357867,
+    "descricao": "Atendimento veterinário e aulas práticas acadêmicas.",
+    "setores": []
+  },
+  {
+    "nome": "Garagem",
+    "tipo": "infraestrutura",
+    "lat": -23.106554,
+    "lng": -50.357477,
+    "descricao": "Setor de transporte e garagem de veículos institucionais.",
+    "setores": []
+  },
+  {
+    "nome": "Fazenda Escola - Escritório",
+    "tipo": "infraestrutura",
+    "lat": -23.107133,
+    "lng": -50.357447,
+    "descricao": "Setor administrativo de apoio às atividades agropecuárias e aulas práticas.",
+    "setores": []
+  },
+  {
+    "nome": "Cantina (Giga)",
+    "tipo": "infraestrutura",
+    "lat": -23.107995,
+    "lng": -50.359623,
+    "descricao": "Espaço de convivência e alimentação do campus.",
+    "setores": []
+  },
+  {
+    "nome": "Auditório Thomaz Nicoletti",
+    "tipo": "infraestrutura",
+    "lat": -23.108147,
+    "lng": -50.358959,
+    "descricao": "Auditório para eventos, palestras e solenidades acadêmicas.",
+    "setores": []
+  },
+  {
+    "nome": "UBS - Unidade Básica de Saúde",
+    "tipo": "infraestrutura",
+    "lat": -23.109717,
+    "lng": -50.362841,
+    "descricao": "Unidade para atendimento básico de saúde no campus.",
+    "setores": []
+  },
+  {
+    "nome": "NEAT - Núcleo de Estudos de Agroecologia e Territórios",
+    "tipo": "infraestrutura",
+    "lat": -23.110001,
+    "lng": -50.362525,
+    "descricao": "Núcleo voltado à pesquisa e extensão em agroecologia.",
+    "setores": []
+  },
+  {
+    "nome": "Biblioteca",
+    "tipo": "infraestrutura",
+    "lat": -23.107027,
+    "lng": -50.358325,
+    "descricao": "Acervo bibliográfico e espaço de estudos.",
+    "setores": []
+  },
+  {
+    "nome": "Equoterapia",
+    "tipo": "infraestrutura",
+    "lat": -23.113083,
+    "lng": -50.355100,
+    "descricao": "Centro de equoterapia para atividades terapêuticas e de ensino.",
+    "setores": []
+  }
+]

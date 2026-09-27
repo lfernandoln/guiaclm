@@ -1,0 +1,44 @@
+[
+  {
+    "nome": "Ciências Contábeis - CCP",
+    "campus": "CCP",
+    "lat": -23.1080573,
+    "lng": -50.358959,
+    "site": null
+  },
+  {
+    "nome": "Pedagogia - CCP",
+    "campus": "CCP",
+    "lat": -23.1081022,
+    "lng": -50.3588744,
+    "site": null
+  },
+  {
+    "nome": "Odontologia - CJ",
+    "campus": "CJ",
+    "lat": -23.1081918,
+    "lng": -50.3588744,
+    "site": null
+  },
+  {
+    "nome": "Educação Física - CJ",
+    "campus": "CJ",
+    "lat": -23.1082367,
+    "lng": -50.358959,
+    "site": null
+  },
+  {
+    "nome": "Direito - CJ",
+    "campus": "CJ",
+    "lat": -23.1081918,
+    "lng": -50.3590436,
+    "site": null
+  },
+  {
+    "nome": "CEEP - Centro Estadual de Educação Profissional",
+    "campus": "CEEP",
+    "lat": -23.1081022,
+    "lng": -50.3590436,
+    "site": null
+  }
+]

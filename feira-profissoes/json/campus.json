@@ -1,0 +1,61 @@
+[
+  {
+    "nome": "Agronomia",
+    "tipo": "curso",
+    "lat": -23.108963,
+    "lng": -50.358740,
+    "site": "https://sites.google.com/uenp.edu.br/agronomia-clm/"
+  },
+  {
+    "nome": "Biologia",
+    "tipo": "curso",
+    "lat": -23.108571,
+    "lng": -50.359250,
+    "site": "https://sites.google.com/uenp.edu.br/biologia-clm/"
+  },
+  {
+    "nome": "Ciência da Computação / Sistemas de Informação",
+    "tipo": "curso",
+    "lat": -23.107372,
+    "lng": -50.359831,
+    "site": "https://cct.uenp.edu.br"
+  },
+  {
+    "nome": "Enfermagem",
+    "tipo": "curso",
+    "lat": -23.109642,
+    "lng": -50.360066,
+    "site": "https://sites.google.com/uenp.edu.br/enfermagem-clm/"
+  },
+  {
+    "nome": "Medicina Veterinária",
+    "tipo": "curso",
+    "lat": -23.106614,
+    "lng": -50.357590,
+    "site": "https://sites.google.com/uenp.edu.br/veterinaria-clm/"
+  },
+  {
+    "nome": "Prédio Central",
+    "tipo": "infraestrutura",
+    "lat": -23.106485,
+    "lng": -50.360471
+  },
+  {
+    "nome": "Cantina (Giga)",
+    "tipo": "infraestrutura",
+    "lat": -23.107995,
+    "lng": -50.359623
+  },
+  {
+    "nome": "Auditório Thomaz Nicoletti",
+    "tipo": "infraestrutura",
+    "lat": -23.108147,
+    "lng": -50.358959
+  },
+  {
+    "nome": "Estacionamento dos Ônibus",
+    "tipo": "infraestrutura",
+    "lat": -23.107365,
+    "lng": -50.359561
+  }
+]
